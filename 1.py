@@ -8,7 +8,7 @@ import tqdm as tqdm
 
 
 import json
-file = json.load(open('D:/한국어 글자체 이미지/01.손글씨/handwriting_data_info_clean.json', "rt", encoding='UTF8'))
+file = json.load(open('D:\korean_hand_write/01.handwrite/handwriting_data_info_clean.json', "rt", encoding='UTF8'))
 
 annotation = [a for a in file['annotations'] if a['attributes']['type']=='단어(어절)']
 
@@ -20,7 +20,7 @@ print(annotation[0])
 
 
 
-ocr_good_files = os.listdir('D:\한국어 글자체 이미지/01.손글씨/1_word/')
+ocr_good_files = os.listdir('D:\korean_hand_write/01.handwrite/1_word/')
 len(ocr_good_files) # 37220
 
 random.shuffle(ocr_good_files)
