@@ -25,7 +25,7 @@ for file_name in tqdm(validation_annotations):
     image = cv2.imread(data_root_path+file_name)
     text = annotations[0]['text']
     cv2.imwrite(save_root_path+'validation/'+file_name, image)
-    gt_file.write("validation/{}\t{}\n".format(file_name, text))
+    gt_file.write("validation/{}\t{}\n".format(file_name, text))    
         
 train_annotations = json.load(open('C:/team_project/train_annotation.json'))
 gt_file = open(save_root_path+'gt_train.txt', 'w')
@@ -35,5 +35,3 @@ for file_name in tqdm(train_annotations):
     text = annotations[0]['text']
     cv2.imwrite(save_root_path+'train/'+file_name, image)
     gt_file.write("train/{}\t{}\n".format(file_name, text))
-    
-##  
